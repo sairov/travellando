@@ -176,6 +176,11 @@ header .navbar__link {
     flex: 1 1 300px;
 }
 
+.travels__card--horizontal {
+    display: flex;
+    gap: 3rem;
+}
+
 .travels__title {
     font-size: 3.2rem;
 }
