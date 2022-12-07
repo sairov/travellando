@@ -1,0 +1,21 @@
+/* HEADER */
+
+header {
+    background-color: var(--text);
+    padding: 3rem;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+}
+
+header .navbar__link {
+    color: var(--bg-light);
+}

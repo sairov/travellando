@@ -1,0 +1,61 @@
+#login {
+  padding: 2rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#login h2 {
+  text-align: center;
+  font-size: 3.8em;
+  color: var(--bg-dark);
+  font-weight: 400;
+  margin: 4rem 0;
+}
+
+input[name="remember"] {
+  margin-right: .5rem;
+  accent-color: var(--primary);
+}
+
+.link--restore:hover {
+  color: var(--primary);
+}
+
+#create,
+#update {
+  padding: 2rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+#create h2,
+#update h2 {
+  text-align: center;
+  font-size: 3.8em;
+  color: #4f4f4f;
+  font-weight: 400;
+  margin: 4rem 0;
+}
+#create .form__box--select,
+#update .form__box--select {
+  padding: 0.5rem;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+#create .form__box--area,
+#update .form__box--area {
+  font-family: "Inter", sans-serif;
+  padding: 0.5rem;
+  width: 100%;
+}
+#create .form__box--img,
+#update .form__box--img {
+  max-width: 100px;
+}
+

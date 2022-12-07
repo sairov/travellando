@@ -1,0 +1,16 @@
+#post {
+    margin: 5rem auto;
+    gap: 3rem;
+}
+
+.post__data, .post__article {
+    align-self: flex-start;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.post__picture img{
+    aspect-ratio: 20 / 9;
+    object-fit: cover;
+    object-position: center;
+}   

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <section id="create" class="container">
+        <h2>Ingresa los datos a continuación para crear un nuevo posteo:</h2>
+        <form class="form" action="/admin/create" method="POST" enctype="application/x-www-form-urlencoded">
+            <div class="form__box">
+                <label class="form__box--label" for="category">Categoría:</label>
+                <select class="form__box--select" name="category" id="category" required>
+                    <option disabled selected hidden>Seleccionar</option>
+                    <option value="tips">Tips</option>
+                    <option value="experiences">Experiencias</option>
+                    <option value="gastronomy">Gastronomía</option>
+                    <option value="travels">Viajes</option>
+                </select>
+            </div>
+            <div class="form__box">
+                <label class="form__box--label" for="name">Título:</label>
+                <input class="form__box--input" type="text" name="title" id="title" placeholder="Título del posteo" required>
+            </div>
+            <div class="form__box">
+                <label class="form__box--label" for="name">Subtítulo:</label>
+                <input class="form__box--input" type="text" name="subtitle" id="subtitle" placeholder="Subtítulo del posteo" required>
+            </div>
+            <div class="form__box">
+                <textarea class="form__box--area" name="description" id="description" cols="100%" rows="10" placeholder="Escribe la descripción del posteo" required></textarea>
+            </div>
+            <div class="form__box">
+                <label class="form__box--label"for="dues">Destino:</label>
+                <select class="form__box--select" name="dues" id="dues">
+                    <option value="america">America</option>
+                    <option value="europe">Europa</option>
+                    <option value="asia">Asia</option>
+                    <option value="oceania">Oceanía</option>
+                    <option value="africa">África</option>
+                </select>
+            </div>
+            <div class="form__box">
+                <label class="form__box--label"for="front">Imagen:</label>
+                <input type="file" name="front" id="front">    
+            </div>
+           <div class="form__box">
+            <input class="form--btn" type="submit" value="Ingresar Posteo">
+            <input class="form--btn" type="reset" value="Limpiar">
+           </div>
+        </form>
+    </section>
+    <%- include('../partials/footer') %>
+</body>
+</html>

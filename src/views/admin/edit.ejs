@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <section id="update" class="container">
+    <h2>Ingresa los datos a continuación para crear un nuevo posteo:</h2>
+    <form class="form" action="/admin/edit/?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="form__box">
+            <label class="form__box--label" for="category">Categoría:</label>
+            <select class="form__box--select" name="category" id="category">
+                <option value="starwars">Tips</option>
+                <option value="pokemon">Experiencias</option>
+                <option value="harrypotter">Harry Potter</option>
+            </select>
+        </div>
+        <div class="form__box">
+            <label class="form__box--label" for="name">Título</label>
+            <input class="form__box--input" type="text" name="name" id="name" value="" required>
+        </div>
+        <div class="form__box">
+            <textarea class="form__box--area" name="description" id="description" cols="30" rows="10" required></textarea>
+        </div>
+        <div class="form__box">
+            <label class="form__box--label" for="sku">SKU:</label>
+            <input class="form__box--input" type="text" name="sku" id="sku" value="" required>
+        </div>
+        <div class="form__box">
+            <label class="form__box--label" for="price">Precio:</label>
+            <input class="form__box--input" type="text" name="price" id="price" data-type="currency" value="">
+        </div>
+        <div class="form__box">
+            <label class="form__box--label"for="discount">Descuento:</label>
+            <input class="form__box--input" type="number" min="0" max="100" step="5" name="discount" id="discount" value="" required>
+        </div>
+        <div class="form__box">
+            <label class="form__box--label"for="dues">Cuotas:</label>
+            <select class="form__box--select" name="dues" id="dues">
+                <option value="0">0 cuotas</option>
+                <option value="3">3 cuotas</option>
+                <option value="6">6 cuotas</option>
+                <option value="9">9 cuotas</option>
+                <option value="12">12 cuotas</option>
+                <option value="18">18 cuotas</option>
+                <option value="24">24 cuotas</option>
+            </select>
+        </div>
+        <div class="form__box">
+            <label class="form__box--label"for="stock">Stock:</label>
+            <input class="form__box--input" type="number" min="0" name="stock" id="stock" value="" required>
+        </div>
+        <div class="form__box">
+            <img class="form__box--img" src="/img/" alt="">
+            <label class="form__box--label"for="front">Imagen Frontal:</label>
+            <input type="file" name="front" id="front">    
+        </div>
+        <div class="form__box">
+            <img class="form__box--img" src="/img/" alt="">
+            <label class="form__box--label"for="back">Imagen en Caja:</label>
+            <input type="file" name="back" id="back">    
+        </div>
+       <div class="form__box">
+        <input class="form--btn" type="submit" value="Modificar Producto">
+       </div>
+    </form>
+</section>
+    <%- include('../partials/footer') %>
+</body>
+</html>

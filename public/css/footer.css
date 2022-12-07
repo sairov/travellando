@@ -1,0 +1,56 @@
+/* FOOTER */
+
+footer {
+    margin-top: 4rem;
+    background-color: var(--text);
+    padding: 9rem 2rem 4rem;
+}
+  
+footer section {
+    margin: auto;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+footer section picture {
+    max-width: 300px;
+}
+  
+footer section picture img {
+   width: 100%;
+}
+footer section .navbar__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    gap: 0.2rem;
+}
+
+footer section .navbar__list--link {
+    font-family: "Raleway", sans-serif;
+    font-weight: 1.8em;
+    transition: background 0.3s ease;
+}
+
+footer section .navbar__list--link a {
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem;
+    color: var(--bg-light);
+}
+
+footer section .navbar__list--link:hover {
+    background-color: var(--primary);
+    color: inherit;
+}
+
+footer .copy {
+    margin-top: 2rem;
+    color: var(--bg-light);
+    text-align: center;
+    font-size: 1.8em;
+}

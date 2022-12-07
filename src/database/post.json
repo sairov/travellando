@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "city": "Buenos Aires",
+        "country": "Argentina",
+        "title": "Conocemos la ciudad que nunca duerme",
+        "subtile": "Cualquier cosa",
+        "description": "Conocé esta ciudad mágica donde tanto la noche y las luces como su cultura y costumbres te atraparán.",
+        "category": "travels",
+        "destiny": "America",
+        "img": "buenos_aires.png"
+    },
+    {
+        "id": 2,
+        "city": "Paris",
+        "country": "Francia",
+        "title": "Conocemos la ciudad de la luz",
+        "subtile": "Cualquier cosa",
+        "description": "Conocé esta ciudad mágica donde tanto la noche y las luces como su cultura y costumbres te atraparán.",
+        "category": "travels",
+        "destiny": "Europe",
+        "img": "buenos_aires.png"
+    },
+    {
+        "id": 3,
+        "city": "Honolulu",
+        "country": "Hawaii",
+        "title": "Recorremos las costas del pacífico",
+        "subtile": "Cualquier cosa",
+        "description": "Conocé esta ciudad mágica donde tanto la noche y las luces como su cultura y costumbres te atraparán.",
+        "category": "travels",
+        "destiny": "America",
+        "img": "buenos_aires.png"
+    },
+    {
+        "id": 4,
+        "city": "Oslo",
+        "country": "Noruega",
+        "title": "Recorremos las montañas del norte de Europa",
+        "subtile": "Cualquier cosa",
+        "description": "Conocé esta ciudad mágica donde tanto la noche y las luces como su cultura y costumbres te atraparán.",
+        "category": "travels",
+        "destiny": "europe",
+        "img": "buenos_aires.png"
+    }
+]

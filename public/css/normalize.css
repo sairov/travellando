@@ -1,0 +1,153 @@
+/* Link al FIGMA:
+    https://www.figma.com/file/Hadvu6ANTCtrqPgHQVHJkd/Untitled?node-id=0%3A1&t=VXz3nLSNG1SBiKhF-1
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Roboto:wght@300;400;500&family=Titan+One&display=swap");
+
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Titan One', cursive; */
+
+/* NORMALIZE */
+
+:root {
+  --primary: #fc4c69;
+  --accent: #0091ad;
+  --text: #2b2b2b;
+  --bg-dark: #65605f;
+  --bg-light: #fdfffc;
+
+  --raleway: "Raleway", sans-serif;
+  --roboto: "Roboto", sans-serif;
+  --titan: "Titan One", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: var(--roboto);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 3.6em;
+}
+
+p {
+  font-size: 1.6em;
+}
+
+a {
+  font-size: 2.2em;
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 4rem;
+}
+
+.form__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.6em;
+}
+
+.form__box--label {
+  min-width: 100px;
+  color: var(--bg-dark);
+}
+
+.form__box--input {
+  flex-grow: 3;
+  padding: 1rem 0.5rem;
+  border: none;
+  border-bottom: 2px solid var(--primary);
+}
+
+.form--btn {
+  padding: 1.2rem 2.7rem;
+  max-width: 200px;
+  background-color: var(--primary);
+  color: var(--bg-light);
+  font-weight: 500;
+  border: none;
+  margin: auto;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form--btn:hover {
+  background-color: #111111;
+}
+
+.form a {
+  color: var(--bg-dark);
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* UTILITARIES */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.section-title {
+  color: var(--primary);
+  font-size: 6.5em;
+  font-family: var(--titan);
+  font-weight: 500;
+}
