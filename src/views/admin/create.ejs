@@ -5,7 +5,7 @@
     <%- include('../partials/header') %>
     <section id="create" class="container">
         <h2>Ingresa los datos a continuación para crear un nuevo posteo:</h2>
-        <form class="form" action="/admin/create" method="POST" enctype="application/x-www-form-urlencoded">
+        <form class="form" action="/create" method="POST" enctype="application/x-www-form-urlencoded">
             <div class="form__box">
                 <label class="form__box--label" for="category">Categoría:</label>
                 <select class="form__box--select" name="category" id="category" required>
@@ -28,19 +28,29 @@
                 <textarea class="form__box--area" name="description" id="description" cols="100%" rows="10" placeholder="Escribe la descripción del posteo" required></textarea>
             </div>
             <div class="form__box">
-                <label class="form__box--label"for="dues">Destino:</label>
-                <select class="form__box--select" name="dues" id="dues">
-                    <option value="america">America</option>
-                    <option value="europe">Europa</option>
-                    <option value="asia">Asia</option>
-                    <option value="oceania">Oceanía</option>
-                    <option value="africa">África</option>
+                <label class="form__box--label"for="countries">Destino:</label>
+                <select class="form__box--select" name="countries" id="countries">
+                    <% countries.forEach(country => { %>
+                        <option value="<%= country.id%>"><%= country.name%></option>
+                    <% }); %> 
                 </select>
             </div>
             <div class="form__box">
-                <label class="form__box--label"for="front">Imagen:</label>
-                <input type="file" name="front" id="front">    
+                <label class="form__box--label" for="cityCode">Ciudad:</label>
+                <input class="form__box--input" type="number" name="cityCode" id="cityCode" placeholder="Código de ciudad" required>
             </div>
+            <div class="form__box">
+                <label class="form__box--label" for="imagePath">Ruta de imagen:</label>
+                <input class="form__box--input" type="text" name="imagePath" id="imagePath" placeholder="Ruta a la imagen" required>
+            </div>
+            <div class="form__box">
+                <label class="form__box--label" for="name">Descripción de la imagen:</label>
+                <input class="form__box--input" type="text" name="caption" id="caption" placeholder="descripción de la imagen" required>
+            </div>
+            <!-- <div class="form__box">
+                <label class="form__box--label"for="image">Imagen:</label>
+                <input type="file" name="image" id="image">    
+            </div> -->
            <div class="form__box">
             <input class="form--btn" type="submit" value="Ingresar Posteo">
             <input class="form--btn" type="reset" value="Limpiar">
