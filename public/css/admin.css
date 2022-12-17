@@ -1,0 +1,46 @@
+@import url("./normalize.css");
+@import url("./header.css");
+@import url("./footer.css");
+
+#admin {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#admin h1 {
+    margin: 2rem 0;
+}
+
+#admin .table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+}
+
+#admin .table__post {
+    width: 1024px;
+    display: grid;
+    grid-template-columns: 20px 120px 4fr 2fr 40px 40px;
+    align-items: center;
+    gap: 2rem;
+}
+
+#admin .table__post--text {
+    font-size: 1.8em;
+}
+
+#admin .table__post--img {
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+#admin .table__post a {
+    display: inline-block;
+    font-size: 1.2em;
+    color: #4f4f4f;
+}

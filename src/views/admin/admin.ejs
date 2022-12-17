@@ -3,9 +3,35 @@
     <%- include('../partials/head') %>
 <body>
     <%- include('../partials/header') %>
-    <main>
-        <h1>ADMIN</h1>
+    <main id="admin" class="container">
+        <h1>Listado de Productos</h1>
+        <a href="/create" class="create-icon">
+            <iconify-icon icon="material-symbols:add-box-rounded" style="color: #fc4c69;"></iconify-icon>
+        </a>
+        <ul class="table">
+            <li class="table__post">
+                <p class="table__post--text">ID</p>
+                <p class="table__post--text">Imágen</p>
+                <p class="table__post--text">Título</p>
+                <p class="table__post--text">Categoría</p>
+                <span></span>
+                <span></span>
+            </li>
+            <% posts.forEach( post => { %> 
+                <li class="table__post">
+                    <p><%= post.id %></p>
+                    <picture class="table__post--img">
+                        <img src="./img/<%= post.imagePath %>" alt="">
+                    </picture>
+                    <p class="table__post--id"><%= post.title %></p>
+                    <p class="table__post--name"><%= post.category %></p>
+                    <a href="/admin/edit/<%= post.sku %>" class="table__post--edit">Editar</a>
+                    <a href="/admin/delete/<%= post.sku %>?_method=DELETE" class="table__post--delete">Eliminar</a>
+                </li>
+            <% }); %> 
+        </ul>
     </main>
     <%- include('../partials/footer') %>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
 </body>
 </html>

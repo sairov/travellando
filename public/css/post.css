@@ -1,3 +1,7 @@
+@import url("./normalize.css");
+@import url("./header.css");
+@import url("./footer.css");
+
 #post {
     margin: 5rem auto;
     gap: 3rem;

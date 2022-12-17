@@ -14,7 +14,7 @@ router.get('/blog', blog);
 
 router.get('/contact', contact);
 
-router.get('/post', post);
+router.get('/post/:id', post);
 
 router.get('/login', login);
 

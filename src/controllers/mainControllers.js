@@ -1,4 +1,5 @@
-const service = require('../models/getPosts');
+const { getAllPosts, getPostByID } = require('../models/postsProvider');
+const { getCountries } = require('../models/countriesProvider');
 
 module.exports = {
     index: (req, res) => {
@@ -12,11 +13,10 @@ module.exports = {
             ]
         });
     },
-    blog: (req, res) => {
+    blog: async (req, res) => {
 
-        const data = service.getAllPosts();
-
-        console.log(data);
+        const data = await getAllPosts();
+        // const country = getCountries().filter(country => country.id == data.destiny);
 
         res.render('blog', {
             title: 'Blog | Travellando',
@@ -40,15 +40,33 @@ module.exports = {
             ]
         });
     },
-    post: (req, res) => {
+    post: async (req, res) => {
+        const data = await getPostByID(req.params.id);
+        console.log('Element: ', new Date(data[0].updatedAt).toLocaleDateString(
+            'es-AR',
+            {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            }
+          ));
+
         res.render('post', {
             title: 'Posteo | Travellando',
             styles: [
-                'normalize',
-                'header',
                 'post',
-                'footer'
-            ]
+            ],
+            data: {
+            ...data[0],
+            updatedAt: new Date(data[0].updatedAt).toLocaleDateString(
+                'es-AR',
+                {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                }
+              )
+            }
         });
     },
     login: (req, res) => {

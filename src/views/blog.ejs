@@ -9,13 +9,13 @@
             <% data.forEach(post => { %>
                 <article class="travels__card travels__card--horizontal">
                     <picture class="travels__img">
-                        <img src="./img/<%= post.img %>" alt="">
+                        <img src="./img/<%= post.imagePath %>" alt="">
                     </picture>
                     <div>
-                        <h3 class="travels__title"><%= post.city%></h3>
-                        <h4 class="travels__subtitle"><%= post.country%></h4>
-                        <p class="travels__text"><%= post.description%></p>
-                        <a class="travels__link" href="/post">Ver posteo</a>
+                        <h3 class="travels__title"><%= post.title%></h3>
+                        <h4 class="travels__subtitle"><%= post.subtitle%></h4>
+                        <!-- <p class="travels__text"><%= post.summary%></p> -->
+                        <a class="travels__link" href="/post/<%= post.id%>">Ver posteo</a>
                     </div>
                 </article>
             <% });%> 
