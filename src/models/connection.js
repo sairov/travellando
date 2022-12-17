@@ -10,13 +10,14 @@ const config = {
 
 const conn = mysql.createConnection(config);
 
-conn.connect((err => {
+const openConn = () => {
+   return conn.connect(err => {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('Conexión exitosa');
+        }
+    });
+};
 
-    if (err) {
-        console.log(err);
-    } else {
-        console.log('Conexión exitosa');
-    }
-}));
-
-module.exports = conn;
+module.exports = { conn, openConn };
