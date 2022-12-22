@@ -10,8 +10,8 @@ module.exports = {
                 } else {
                     resolve(result);
                 }
+                // conn.end(() => console.log('Cierre exitoso'));
             });
-            conn.end(() => console.log('Cierre exitoso'));
         });
     },
     getPostByID: (id) => {   
@@ -23,8 +23,8 @@ module.exports = {
                  } else {
                      resolve(result);
                  }
+                //  conn.end(() => console.log('Cierre exitoso'));
              });
-            conn.end(() => console.log('Cierre exitoso'));
          });
      },
     saveNewPost: (values) => {   
@@ -38,8 +38,8 @@ module.exports = {
                 } else {
                     resolve(result);
                 }
+                // conn.end(() => console.log('Cierre exitoso'));
             });
-            conn.end(() => console.log('Cierre exitoso'));
          });
      }
 }

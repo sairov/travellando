@@ -56,7 +56,8 @@ module.exports = {
     save: async (req, res) => {
 
         const createdAt = new Date().toISOString().slice(0, 19).replace('T', ' ');
-
+        const image = req.file.filename;
+        console.log(image);
         const values = [
             req.body.title,
             req.body.subtitle,
@@ -64,12 +65,12 @@ module.exports = {
             req.body.countries,
             req.body.cityCode,
             req.body.category,
-            req.body.imagePath,
+            image,
             req.body.caption,
             createdAt,
             createdAt
         ];
-
+        console.log(values);
         await saveNewPost(values);
         res.redirect('/blog');
     }

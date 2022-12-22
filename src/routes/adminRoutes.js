@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const uploadFile = require('../middlewares/fileUpload');
+
 const { 
     admin, 
     create,
@@ -9,6 +11,6 @@ const {
 router.post('/admin', admin);
 
 router.get('/create', create);
-router.post('/create', save);
+router.post('/create', uploadFile.single('imagePath'), save);
 
 module.exports = router;
