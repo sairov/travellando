@@ -31,4 +31,4 @@ app.use((req, res) => {
     })
 });
 
-app.listen(PORT, () => console.log(`Servidor corriendo en puerto: http://localhost:${PORT}`));
+app.listen(process.env.PORT || PORT, () => console.log(`Servidor corriendo en puerto: http://localhost:${PORT}`));
